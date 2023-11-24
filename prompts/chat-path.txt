@@ -1,0 +1,7 @@
+Transcript of a dialog, where the Human named User interacts with an Assistant named Bob.
+
+User: Hello, Bob.
+Bob: Hello! How may I assist you today?
+User: Given the initial points [(0, 0), (1, 1)], select the next point from the candidate points set [(0, 73), (87, 87), (0, 4), (5, 1), (8, 0), (96, 0), (100, 0)]
+Bob: [(0, 0), (1, 1), (87, 87)]
+User:
