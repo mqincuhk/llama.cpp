@@ -22,13 +22,14 @@ while getopts "dg" opt; do
   esac
 done
 
-$DEBUGGER $EXE \
-        --model-base $MODEL \
-        $GPUARG \
-        --checkpoint-in  chk-ol3b-shakespeare-LATEST.gguf \
-        --checkpoint-out chk-ol3b-shakespeare-ITERATION.gguf \
-        --lora-out lora-ol3b-shakespeare-ITERATION.bin \
-        --train-data "$LLAMA_TRAINING_DIR\shakespeare.txt" \
-        --save-every 10 \
-        --threads 10 --adam-iter 30 --batch 4 --ctx 64 \
-        --use-checkpointing
+
+### Begin to finetune using LORA adapters
+./finetune \
+    --model-base ./models/7B/ggml-model-q4_0.gguf \
+    --checkpoint-in  chk-lora-open-llama-7b-reason-LATEST.gguf \
+    --checkpoint-out chk-lora-open-llama-7b-reason-ITERATION.gguf \
+    --lora-out lora-open-llama-7b-reason-ITERATION.bin \
+    --train-data reasoning_problems.json  \
+    --save-every 15 \
+    --threads 6 --adam-iter 30 --batch 4 --ctx 64 \
+    --use-checkpointing
