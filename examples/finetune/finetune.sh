@@ -26,10 +26,10 @@ done
 ### Begin to finetune using LORA adapters
 ./finetune \
     --model-base ./models/7B/ggml-model-q4_0.gguf \
-    --checkpoint-in  chk-lora-open-llama-7b-reason-LATEST.gguf \
-    --checkpoint-out chk-lora-open-llama-7b-reason-ITERATION.gguf \
-    --lora-out lora-open-llama-7b-reason-ITERATION.bin \
-    --train-data reasoning_problems.json  \
+    --checkpoint-in  chk-lora-open-llama-7b-math-LATEST.gguf \
+    --checkpoint-out chk-lora-open-llama-7b-math-ITERATION.gguf \
+    --lora-out lora-open-llama-7b-math-ITERATION.bin \
+    --train-data math_problems.json  \
     --save-every 15 \
-    --threads 6 --adam-iter 30 --batch 4 --ctx 64 \
+    --threads 6 --adam-iter 45 --batch 4 --ctx 64 \
     --use-checkpointing
