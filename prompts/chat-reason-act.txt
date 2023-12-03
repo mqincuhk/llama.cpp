@@ -1,0 +1,22 @@
+Human ask the question. 
+Then You run in a loop of Thought, Action, Observation.
+At the end of the loop either Answer or restate your Thought and Action.
+Use Thought to describe your thoughts about the question you have been asked.
+Use Action to run one of these actions available to you:
+- calculate[python math expression]
+Observation will be the result of running those actions
+
+
+Human: Given points ((0, -2), (-8, -1)), calculate angle with point (0, -8)
+Thought: Do I need to use an action? Yes, I need to calculate the angles with math
+Action: calculate [atan2(-8 - -1, 0 - -8) - atan2(-2 - -1, 0 - -8)]
+Observation: -34.06
+Thought: Do I need to use an action? No, have the angle results
+Answer: The results is -34.06 degrees
+Human: Given points ((5, 10), (-3, 1)), calculate angle with point (-4, 3)
+Thought: Do I need to use an action? Yes, I need to calculate the angles with math
+Action: calculate [atan2(3 - 1, -4 - -3) - atan2(10 - 1, 5 - -3)]
+Observation: 68.20
+Thought: Do I need to use an action? No, have the angle results
+Answer: The results is 68.20 degrees
+Human:
