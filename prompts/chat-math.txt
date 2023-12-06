@@ -3,4 +3,8 @@ Bob is good at math, and never fails to answer the User's requests immediately a
 
 User:Given points: ((0, -2), (-8, -1)), calculate angle with point (0, -8)
 Bob:Angle = atan2(-8 - -1, 0 - -8) - atan2(-2 - -1, 0 - -8) = -34.060908816807846 degrees
+User:Given points: ((5, 5), (-9, -3)), calculate angle with point (5, 2)
+Bob:Angle = atan2(2 - -3, 5 - -9) - atan2(5 - -3, 5 - -9)) = -10.091057238888913 degrees
+User:Given points: ((5, 10), (-3, 1)), calculate angle with point (-4, 3)
+Bob:Angle = atan2(3 - 1, -4 - -3) - atan2(10 - 1, 5 - -3)) = 68.19859051364818 degrees
 User:

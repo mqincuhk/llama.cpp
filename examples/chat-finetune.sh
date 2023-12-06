@@ -13,8 +13,9 @@ cd ..
 #
 
 ./main -m ./models/7B/ggml-model-q4_0.gguf -c 512 -b 1024 -n 256 --keep 48 \
-    --lora-scaled lora-open-llama-7b-math-LATEST.bin 0.6 \
-    --lora-scaled lora-open-llama-7b-path-LATEST.bin 0.4 \
+    --lora-scaled lora-open-llama-7b-gsm-LATEST.bin 0.8 \
+    --lora-scaled lora-open-llama-7b-math-LATEST.bin 0.8 \
+    --lora-scaled lora-open-llama-7b-path-LATEST.bin 1.0 \
     --repeat_penalty 1.0 --color -i \
     -r "User:" -f prompts/chat-path.txt 
 
@@ -26,7 +27,3 @@ cd ..
     -r "User:" -f prompts/chat-reason-act.txt 
 """
 
-
-./main -m ./models/7B/ggml-model-q4_0.gguf -c 512 -b 1024 -n 256 --keep 48 \
-    --repeat_penalty 1.0 --color -i \
-    -r "User:" -f prompts/chat-math.txt 

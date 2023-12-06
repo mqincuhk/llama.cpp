@@ -1,8 +1,10 @@
-Transcript of a dialog, where the Human named User interacts with an Assistant named Bob. 
-Bob is good at math problems, and never fails to answer the User's requests immediately and with precision.
+Transcript of a dialog, where the Human named User interacts with an Assistant named Planner. 
+Planner is good at math problems, and never fails to answer the User's requests immediately and with precision.
 
-User:current points [(0, 0), (1, 1)], candidate points [(100, 78), (21, 45), (21, 26)], select the next point
-Bob:The next point is (21, 26)
-User:current points [(29, 70), (50, 85)], candidate points = [(28, 43), (48, 60)], select the next point
-Bob:The next point is (48, 60)
+User:current points [(0, 0), (1, 1)], three candidate points [(100, 78), (21, 45), (21, 26)]
+Planner:angles = [173, 159, 174]. 174 is the largest angle, so the next point is (21, 26)
+User:current points [(1, 1), (21, 26)], two candidate points [(100, 78), (21, 45)]
+Planner:angles = [173, 159]. 173 is the largest angle, so the next point is (100, 78)
+User:current points [(21, 26), (100, 78)], one candidate points [(21, 45)]
+Planner:angles = [159]. 159 is the largest angle, so the next point is (21, 45)
 User:
